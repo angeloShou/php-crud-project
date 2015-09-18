@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>TODO write content</div>
+        estou enviando esse e-mail a partir de meu e-mail pessoa, pois o SIGA está muito instável e não consegui enviar por lá... Por favor, passem para quem não tiver recebido...
+
+
+
+Nos exemplos da Aula 16, passei uma query (consulta) mais complexa para fazer o relatório em dois exemplos: pasta "4_crud_NxN" (arquivo "consultar.php") e pasta "7_relatorio". Nesses exemplos montei uma query usando INNER JOIN. É essa aqui:
+
+SELECT aluno.nome_aluno, disciplina.nome_disciplina
+FROM aluno_disciplina
+INNER JOIN aluno ON
+    aluno.id_aluno = aluno_disciplina.id_aluno
+INNER JOIN disciplina ON
+    disciplina.id_disciplina = aluno_disciplina.id_disciplina
+
+
+
+Fiquei de passar a query SEM uso de INNER JOIN para vocês, pois alguns falaram que não conheciam esse recurso. Nesse caso, ela ficaria assim:
+
+SELECT A.nome_aluno, D.nome_disciplina
+FROM aluno_disciplina AD, aluno A, disciplina D
+WHERE A.id_aluno = AD.id_aluno
+      AND AD.id_disciplina = D.id_disciplina
+
+
+
+Nesse caso, estou fazendo uso de "Alias" (não sei se foi esse o termo que o Ronney passou para vocês, mas é um "apelido" dado à tabela para não precisar digitar o nome da tabela toda hora).
+
+
+
+Caso não queira usar nem "Alias" e nem INNER JOIN, a query pode ficar assim:
+
+SELECT aluno.nome_aluno, disciplina.nome_disciplina
+FROM aluno_disciplina, aluno, disciplina 
+WHERE aluno.id_aluno = aluno_disciplina.id_aluno
+      AND aluno_disciplina.id_disciplina = disciplina.id_disciplina
+
+
+
+Reparem que ela fica maior por causa do nome das tabelas se repetindo toda hora...
+
+
+
+No último caso, caso queiram fazer uso de INNER JOIN e de "Alias", ficaria assim:
+
+SELECT A.nome_aluno, D.nome_disciplina
+FROM aluno_disciplina AD
+INNER JOIN aluno A ON
+    A.id_aluno = AD.id_aluno
+INNER JOIN disciplina D ON
+    D.id_disciplina = AD.id_disciplina
+
+
+    </body>
+</html>

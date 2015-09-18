@@ -1,0 +1,116 @@
+#area2
+            {
+                position:relative;
+                left:17%;
+                top:2em;
+                width:350px;
+                height:270px;
+            }             
+
+#area
+            {
+                position:relative;
+                left:17%;
+                top:2em;
+                width:750px;
+                height:270px;
+            }
+            #area #formulario
+            {
+                 position:absolute;
+                 display:block;  
+}
+ 
+ 
+fieldset
+{
+    background-color:#A7C0DC;
+    width:300px;
+    height:250px;
+}
+legend
+{
+    font-weight:bold;
+    font-family: "Segoe UI","Arial","Times New Roman";
+}
+#formulario label
+{
+    position:absolute;
+    left:25px;
+    margin-right:5px;
+}
+#formulario input.nome
+{
+    background-color:#f1ff00;
+    position:absolute;
+    left:105px;
+    top:23px;
+    width:225px;
+}
+#formulario input.cpf
+{
+    background-color:#f1ff00;
+    position:absolute;
+    left:95px;
+    top:23px;
+    width:225px;
+}
+#formulario input.email
+{  
+    background-color:#f1ff00;
+    position:absolute;
+    left:95px;
+    margin-top:2px;
+    width:225px;
+}
+#formulario textarea.msg
+{
+    position:absolute;
+    background-color:#f1ff00;
+}
+ 
+ 
+ 
+ 
+ 
+#formulario input.btn_submit
+{
+    border-style:dashed;
+    position:absolute;
+    bottom: 0.5em;
+    right:10px;
+    background-color:#f1ff00;
+}
+
+ #contactform {
+ 
+    width: 500px;
+    padding: 50px;
+    position: center;
+    overflow:auto;
+ 
+    /* Border style */
+    border: 1px solid #cccccc;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px; 
+ 
+    /* Border Shadow */
+    -moz-box-shadow: 2px 2px 2px #cccccc;
+    -webkit-box-shadow: 2px 2px 2px #cccccc;
+    box-shadow: 2px 2px 2px #cccccc;
+ 
+    }
+       
+        
+.error {
+    color: #FF0000;
+}
+
+   body {
+ background-image: url(fundo.jpg);
+ background-repeat: no-repeat;
+ /*background-position: left top;*/
+ background-attachment: scroll;
+
+}

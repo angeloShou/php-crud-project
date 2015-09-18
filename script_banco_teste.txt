@@ -1,0 +1,31 @@
+--
+-- Estrutura da tabela `aluno`
+--
+
+CREATE TABLE IF NOT EXISTS `aluno` (
+  `id_aluno` int(11) NOT NULL AUTO_INCREMENT,
+  `nome_aluno` varchar(60) NOT NULL,
+  `periodo_aluno` int(11) NOT NULL,
+  `idade_aluno` int(11) NOT NULL,
+  `id_curso` int(11) NOT NULL,
+  PRIMARY KEY (`id_aluno`),
+  KEY `id_curso` (`id_curso`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `curso`
+--
+
+CREATE TABLE IF NOT EXISTS `curso` (
+  `id_curso` int(11) NOT NULL AUTO_INCREMENT,
+  `nome_curso` varchar(40) NOT NULL,
+  PRIMARY KEY (`id_curso`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Restrições para a tabela `aluno`
+--
+ALTER TABLE `aluno`
+  ADD CONSTRAINT `aluno_ibfk_1` FOREIGN KEY (`id_curso`) REFERENCES `curso` (`id_curso`);
